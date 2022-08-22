@@ -4,62 +4,79 @@ import java.util.Scanner;
 
 public class calendar {
 	public static void main(String[] args) {
-		int a,b;
-		
 		Scanner scanner = new Scanner(System.in);
-		String s1,s2;
-		System.out.println(" 해당하는 년도와 월을 입력해주세요.  입력예시:2022 8");
+		System.out.println("달을 입력하세요");
+		int month = scanner.nextInt();
 		
-		// 입력 : 키보드 입력 (해당하는 년도, 월)
-		s1 = scanner.next();
-		s2 = scanner.next();
-		a = Integer.parseInt(s1);
-		b = Integer.parseInt(s2);
+		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		
-		// 출력 : 해당 월의 최대 일수 출력
-		if(b == 1) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
-		if(b == 2) {
-			if(a%4 == 0) {
-				System.out.printf("%d년 %d월은 29일까지 있습니다.", a, b);	
-			} else {
-				System.out.printf("%d년 %d월은 28일까지 있습니다.", a, b);
-			}
-		}
-		if(b == 3) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
-		if(b == 4) {
-			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
-		}
-		if(b == 5) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
-		if(b == 6) {
-			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
-		}
-		if(b == 7) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
-		if(b == 8) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
-		if(b == 9) {
-			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
-		}
-		if(b == 10) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
-		if(b == 11) {
-			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
-		}
-		if(b == 12) {
-			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
-		}
+		System.out.printf("%d월은 %d일까지 있습니다.\n", month, maxDays[month-1]);
 		scanner.close();
 	}
 }
+
+
+
+//import java.util.Scanner;
+//
+//public class calendar {
+//	public static void main(String[] args) {
+//		int a,b;
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		String s1,s2;
+//		System.out.println(" 해당하는 년도와 월을 입력해주세요.  입력예시:2022 8");
+//		
+//		// 입력 : 키보드 입력 (해당하는 년도, 월)
+//		s1 = scanner.next();
+//		s2 = scanner.next();
+//		a = Integer.parseInt(s1);
+//		b = Integer.parseInt(s2);
+//		
+//		// 출력 : 해당 월의 최대 일수 출력
+//		if(b == 1) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		if(b == 2) {
+//			if(a%4 == 0) {
+//				System.out.printf("%d년 %d월은 29일까지 있습니다.", a, b);	
+//			} else {
+//				System.out.printf("%d년 %d월은 28일까지 있습니다.", a, b);
+//			}
+//		}
+//		if(b == 3) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		if(b == 4) {
+//			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
+//		}
+//		if(b == 5) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		if(b == 6) {
+//			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
+//		}
+//		if(b == 7) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		if(b == 8) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		if(b == 9) {
+//			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
+//		}
+//		if(b == 10) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		if(b == 11) {
+//			System.out.printf("%d년 %d월은 30일까지 있습니다.", a, b);
+//		}
+//		if(b == 12) {
+//			System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
+//		}
+//		scanner.close();
+//	}
+//}
 
 //6. 배열을 활용하는 방법은 잘 모르겠다. 배열을 쓰면 간단해질 것 같다.
 
