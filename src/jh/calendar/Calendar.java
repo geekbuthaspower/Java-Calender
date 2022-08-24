@@ -2,20 +2,38 @@ package jh.calendar;
 
 import java.util.Scanner;
 
-public class calendar {
+public class Calendar {
+
+	private final int[] MaxDays = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+	public int getMaxDaysOfMonth(int month) {
+		return MaxDays[month - 1];
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("달을 입력하세요");
-		int month = scanner.nextInt();
+		Calendar cal = new Calendar();
 		
-		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		// 3을 입력하면 아래 부분이 3번 반복 -> 아래 부분을 for문 안에 넣어줘야 좋을듯 하다.		
+
+		System.out.println("몇번 결과를 출력하시겠습니까?");
+	
+		int n = 0;
+		Scanner repeat = new Scanner(System.in); 
+		int a = repeat.nextInt();
+		while (n < a) {
+			
+	
+			System.out.println("\n달을 입력하세요");
+			int month = scanner.nextInt();
 		
-		System.out.printf("%d월은 %d일까지 있습니다.\n", month, maxDays[month-1]);
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
+			n++;
+		}
 		scanner.close();
+		repeat.close();
 	}
 }
-
-
 
 //import java.util.Scanner;
 //
@@ -80,33 +98,24 @@ public class calendar {
 
 //6. 배열을 활용하는 방법은 잘 모르겠다. 배열을 쓰면 간단해질 것 같다.
 
-
 //5. 출력 멘트 수정. 
 //이전 : System.out.println("30일까지 있습니다.");
 //이후 : System.out.printf("%d년 %d월은 31일까지 있습니다.", a, b);
 
-
 //4. 해당년도에 따라 2월의 출력값이 달라지도록 구현
 //a가 2016, 2020, 2024 => 2024 나누기 4의 나머지가 0.
 
-
 //3. 일단 입력하는 월에 따라 해당 일수 출력하는 것부터 구현.
-
 
 //2. 찾아보니 2월이 29일인 경우도 있다.('윤일')  # 2016/2 2020/2 2024/2 -> 29일까지.
 //입력값 형식과 출력값 형식을 바꿔봤다.
 //입력 : 키보드 입력 (해당년도, 해당 월)
 //출력 : 해당 월의 최대 일수 출력
 
-
 //1. 주어진 과제
 //변수, if, 배열
 //3(엔터)
 //3월은 31일까지 있습니다.
-
-
-
-
 
 //package jh.calendar;
 //
