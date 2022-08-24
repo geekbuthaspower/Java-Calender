@@ -30,6 +30,12 @@ public class Calendar {
 			if (month > 12) {
 				continue;
 			}
+			if (month < -1) {
+				continue;
+			}
+			if (month == 0) {
+				continue;
+			}
 		
 			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
 		}
